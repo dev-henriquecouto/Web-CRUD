@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script> <!-- Adicionando Tailwind via CDN -->
+    <script src="https://kit.fontawesome.com/88a44b315e.js" crossorigin="anonymous"></script> <!-- Font Awesome -->
+    <title>Web Crud</title>
+</head>
+<body class="m-5">
+    <!-- Container Users -->
+    <div class="flex flex-col items-center gap-5">
+        <!-- Tittle -->
+        <div class="font-bold text-3xl">
+            Users
+        </div>
+
+        <div class="flex flex-col bg-gray-200 shadow-lg rounded-lg p-6 gap-4
+                    sm:flex-row">
+            <!-- Inputs -->
+           <b>Name:</b><input id="inptname" type="text" placeholder="your name" class="rounded-md p-2">
+           <b>E-mail:</b><input id="inptemail" type="text" placeholder="your E-mail" class="rounded-md p-2">
+           <b>Number:</b><input id="inptnumber" type="text" placeholder="(00) 0000-0000" maxlength="15" class="rounded-md p-2">
+
+           <!-- Button -->
+           <button id="btnadd" class="bg-green-400 rounded-md p-3 text-white">
+            <b>Save User</b>
+           </button>
+        </div>
+
+        <!-- DataGrid -->
+        <div class="flex flex-col justify-center items-center bg-gray-200 shadow-lg rounded-lg p-6 gap-4
+                    sm:flex-row justify-center items-center">
+            <div id="datagrid" class="flex flex-col">
+                <!-- div.js -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Add-modal / edit-modal -->
+    <div id="add-modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center transform scale-90 opacity-0 transition-all duration-300">
+            <p class="flex justify-center items-center gap-4 text-lg font-semibold">
+                <i class="fa-solid fa-circle-check" style="color: #2dc868; font-size: 2rem;"></i>
+                Usuário Salvo!
+            </p>
+        </div>
+    </div>
+
+    <!-- Delete-modal -->
+    <div id="delete-modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center transform scale-90 opacity-0 transition-all duration-300">
+            <p class="flex justify-center items-center gap-4 text-lg font-semibold">
+                <i class="fa-solid fa-circle-xmark" style="color: #cd0404; font-size: 2rem;"></i>
+                Usuário Deletado!
+            </p>
+        </div>
+    </div>
+</body>
+<script src="https://unpkg.com/imask"></script>
+<script src="script.js"></script>
+</html>
