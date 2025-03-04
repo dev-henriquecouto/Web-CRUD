@@ -1,9 +1,6 @@
 // Botão de adicionar usuário
 const btnSalvar = document.getElementById("btnadd")
 
-// Display de usuários
-const display = document.getElementById("display")
-
 // ID Auto Increment
 let contador = localStorage.getItem("contador") ? parseInt(localStorage.getItem("contador")) : 0
 
